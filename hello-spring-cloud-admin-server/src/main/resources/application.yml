@@ -1,0 +1,25 @@
+spring:
+  application:
+    name: admin-server
+  security:
+    user:
+      name: admin
+      password: 123456
+  boot:
+    admin:
+      discovery:
+        ignored-services: ${spring.application.name}
+  cloud:
+    # 使用 Nacos 作为服务注册发现
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+server:
+  port: 8096
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

@@ -1,0 +1,26 @@
+spring:
+  application:
+    name: admin-client
+  boot:
+    admin:
+      client:
+        url: http://localhost:8096 #配置admin-server地址
+  cloud:
+    # 使用 Nacos 作为服务注册发现
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+
+server:
+  port: 8097
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  endpoint:
+    health:
+      show-details: always
+logging:
+  file: admin-client.log  #添加开启admin的日志监控
