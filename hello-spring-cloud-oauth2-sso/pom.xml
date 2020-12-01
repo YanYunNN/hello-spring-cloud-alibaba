@@ -9,9 +9,9 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
     <groupId>com.yanyun</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>hello-spring-cloud-oauth2-sso</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ConsumerFeignApplication</name>
+    <name>hello-spring-cloud-oauth2-sso</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
@@ -22,16 +22,29 @@
         <!-- Spring Boot Begin -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-oauth2</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+            <version>0.9.0</version>
         </dependency>
         <!-- Spring Boot End -->
 
@@ -43,18 +56,6 @@
         <dependency>
             <groupId>com.alibaba.cloud</groupId>
             <artifactId>spring-cloud-starter-alibaba-nacos-config</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-openfeign</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.cloud</groupId>
-            <artifactId>spring-cloud-starter-alibaba-sentinel</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>com.alibaba.csp</groupId>
-            <artifactId>sentinel-datasource-nacos</artifactId>
         </dependency>
         <!-- Spring Cloud End-->
     </dependencies>

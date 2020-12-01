@@ -8,7 +8,10 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.oauth2.provider.token.TokenStore;
 import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenConverter;
+import org.springframework.security.oauth2.provider.token.store.JwtTokenStore;
+import org.springframework.security.oauth2.provider.token.store.redis.RedisTokenStore;
 
 /**
  * @author xcai
@@ -18,10 +21,6 @@ import org.springframework.security.oauth2.provider.token.store.JwtAccessTokenCo
  */
 @Configuration
 public class JwtTokenStoreConfig {
-    @Bean
-    public PasswordEncoder passwordEncoder() {
-        return new BCryptPasswordEncoder();
-    }
 
     @Bean
     public JwtAccessTokenConverter jwtAccessTokenConverter() {
@@ -34,5 +33,10 @@ public class JwtTokenStoreConfig {
     @Bean
     public JwtTokenEnhancer jwtTokenEnhancer() {
         return new JwtTokenEnhancer();
+    }
+
+    @Bean
+    public TokenStore jwtTokenStore() {
+        return new JwtTokenStore(jwtAccessTokenConverter());
     }
 }
