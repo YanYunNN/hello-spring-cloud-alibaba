@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class UserController {
     @GetMapping("/getCurrentUser")
     public Object getCurrentUser(Authentication authentication) {
-        return authentication.getPrincipal();
+        return authentication;
     }
 
     @PreAuthorize("hasAuthority('admin')")
