@@ -73,7 +73,7 @@ public class AuthorizationServerConfig extends AuthorizationServerConfigurerAdap
                 //配置redirect_uri，用于授权成功后跳转
                 //.redirectUris("http://www.baidu.com")
                 //单点登录时配置
-                .redirectUris("http://localhost:9501/login")
+                .redirectUris("http://localhost:8100/login")
                 //自动授权配置
                 .autoApprove(true)
                 //配置申请的权限范围

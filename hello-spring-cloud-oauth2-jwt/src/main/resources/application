@@ -1,11 +1,11 @@
 spring:
-  application:
-    name: oauth2-service-jwt
-  cloud:
-    # 使用 Nacos 作为服务注册发现
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
+#  application:
+#    name: oauth2-service-jwt
+#  cloud:
+#    # 使用 Nacos 作为服务注册发现
+#    nacos:
+#      discovery:
+#        server-addr: 127.0.0.1:8848
   redis:
     #数据库索引
     database: 0
