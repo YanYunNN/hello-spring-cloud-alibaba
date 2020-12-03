@@ -1,0 +1,39 @@
+server:
+  port: 8092
+spring:
+  zipkin:
+    base-url: http://127.0.0.1:9411/
+    #让nacos把它当成一个URL，而不要当做服务名
+    discovery-client-enabled: false
+  sleuth:
+    sampler:
+      #采样的百分比,代表全部强求都需要采样
+      probability: 1.0
+  datasource:
+    url: jdbc:mysql://${spring.cloud.nacos.discovery.ip}:3306/seata?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: XXX
+    password: XXX
+    driver-class-name: com.mysql.jdbc.Driver
+    druid:
+      # 初始化大小，最小，最大
+      initial-size: 5
+      min-idle: 5
+      max-active: 20
+      # 配置获取连接等待超时的时间
+      max-wait: 60000
+      # 配置间隔多久才进行一次检测，检测需要关闭的空闲连接，单位毫秒
+      time-between-eviction-runs-millis: 60000
+      # 配置一个连接在池中最小生存时间
+      min-evictable-idle-time-millis: 300000
+      validation-query: SELECT 1 FROM sys_user
+      test-while-idle: true
+      test-on-borrow: false
+      test-on-return: false
+      # 打开 PSCache，并且指定每个连接上 PSCache 的大小
+      pool-prepared-statements: true
+      max-pool-prepared-statement-per-connection-size: 20
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"

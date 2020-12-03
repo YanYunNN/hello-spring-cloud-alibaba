@@ -28,6 +28,7 @@ spring:
           predicates:
             # Method 方法谓词，这里是匹配 GET 和 POST 请求
             - Method=GET,POST
+            - Path=/**
         - id: NACOS-CONSUMER-FEIGN
           uri: lb://nacos-consumer-feign
           predicates:
