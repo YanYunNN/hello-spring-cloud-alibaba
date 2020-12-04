@@ -1,0 +1,1 @@
+keytool -genkeypair -alias jwt -keyalg RSA -dname "CN=Web Server,OU=China,O=www.howardliu.cn,L=Beijing,S=Beijing,C=China" -keypass 123456 -keystore jwt.jks -storepass 123456

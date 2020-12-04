@@ -1,0 +1,23 @@
+server:
+  port: 8002
+
+spring:
+  redis:
+    #数据库索引
+    database: 0
+    host: 124.71.187.82
+    port: 6379
+    password: 123456
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+encrypt:
+  key-store:
+    location: classpath:/jwt.jks
+    alias: jwt
+    password: 123456
+    secret: 123456
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
