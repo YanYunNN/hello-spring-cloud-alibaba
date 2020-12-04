@@ -1,0 +1,1 @@
+http://www.macrozheng.com/#/cloud/gateway_oauth2

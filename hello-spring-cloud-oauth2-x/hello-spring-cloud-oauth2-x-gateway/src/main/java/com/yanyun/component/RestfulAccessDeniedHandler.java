@@ -19,7 +19,7 @@ import java.nio.charset.StandardCharsets;
  * @author xcai
  * @version 1.0
  * @date 2020/12/04/10:35
- * @description
+ * @description 自定义返回结果：没有权限访问时
  */
 @Component
 public class RestfulAccessDeniedHandler implements ServerAccessDeniedHandler {
