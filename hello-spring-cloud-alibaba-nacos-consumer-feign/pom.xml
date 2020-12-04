@@ -9,9 +9,9 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
     <groupId>com.yanyun</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>hello-spring-cloud-alibaba-nacos-consumer-feign</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>ConsumerFeignApplication</name>
+    <name>hello-spring-cloud-alibaba-nacos-consumer-feign</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

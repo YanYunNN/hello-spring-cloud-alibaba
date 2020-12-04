@@ -9,7 +9,7 @@
         <relativePath>../hello-spring-cloud-alibaba-dependencies/pom.xml</relativePath>
     </parent>
     <groupId>com.yanyun</groupId>
-    <artifactId>demo</artifactId>
+    <artifactId>hello-spring-cloud-alibaba-nacos-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>hello-spring-cloud-alibaba-nacos-consumer</name>
     <description>Demo project for Spring Boot</description>

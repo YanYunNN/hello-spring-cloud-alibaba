@@ -1,16 +1,10 @@
+server:
+  port: 8093
 spring:
-  application:
-    name: nacos-consumer-feign
   cloud:
-    nacos:
-      discovery:
-        server-addr: 127.0.0.1:8848
     sentinel:
       transport:
         dashboard: 127.0.0.1:8844
-      #取消懒加载
-      eager: true
-      #限流持久化
       datasource:
         ds1:
           nacos:
@@ -19,9 +13,7 @@ spring:
             groupId: DEFAULT_GROUP
             data-type: json
             rule-type: flow
-
-server:
-  port: 8093
+      eager: true
 
 feign:
   sentinel:
