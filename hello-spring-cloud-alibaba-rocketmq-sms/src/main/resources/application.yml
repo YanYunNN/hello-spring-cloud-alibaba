@@ -1,0 +1,14 @@
+server:
+  port: 8190
+
+rocketmq:
+  name-server: 127.0.0.1:9876
+  producer:
+    group: shop-order
+
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
