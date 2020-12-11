@@ -1,0 +1,26 @@
+server:
+  port: 2001
+
+spring:
+  application:
+    name: seata-order
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 124.71.187.82:8848
+      config:
+        enabled: false
+    alibaba:
+      seata:
+        tx-service-group: fsp_tx_group #自定义组名称，需要与seata-server中配置的对应
+  datasource:
+    url: jdbc:mysql://124.71.187.82:3306/seata-order?serverTimezone=GMT&useUnicode=true&characterEncoding=utf-8&useSSL=false
+    username: admin
+    password: caixin1997
+    driver-class-name: com.mysql.jdbc.Driver
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
